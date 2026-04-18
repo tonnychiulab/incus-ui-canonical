@@ -1,5 +1,7 @@
 import type { FC, MouseEvent } from "react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import {
   Button,
   Icon,
@@ -82,6 +84,7 @@ const initializeProjectName = (
 };
 
 const Navigation: FC = () => {
+  const { t, i18n } = useTranslation();
   const { isRestricted, isOidc } = useAuth();
   const { menuCollapsed, setMenuCollapsed } = useMenuCollapsed();
   const {
